@@ -1,0 +1,123 @@
+.question-page {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.question-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.heart-decoration {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.question-text {
+  font-size: 32px;
+  color: #ff1493;
+  margin-bottom: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Common button styles */
+button {
+  font-size: 20px;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  touch-action: none; /* Prevent default touch behaviors */
+}
+
+.yes-button {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  transform: scale(1);
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.yes-button:active {
+  transform: scale(0.98);
+}
+
+.no-button {
+  background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 100%);
+  color: #666;
+  /* Position will be controlled by inline styles when moved */
+}
+
+.no-button:hover {
+  /* No hover effect - button moves away before hover completes */
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .question-text {
+    font-size: 42px;
+  }
+  
+  .heart-decoration {
+    font-size: 80px;
+  }
+  
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  button {
+    font-size: 22px;
+    padding: 20px 60px;
+  }
+}
+
+/* Small mobile optimization */
+@media (max-width: 380px) {
+  .question-text {
+    font-size: 28px;
+  }
+  
+  .question-container {
+    padding: 30px 20px;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 16px 40px;
+    min-width: 180px;
+  }
+}
