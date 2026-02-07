@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "./QuestionPage.css";
 
-function QuestionPage({ onYes }) {
+function QuestionPage({ onYes, name }) {
   const noButtonRef = useRef(null);
   const [offset, setOffset] = useState(0); // Track offset (horizontal or vertical)
   const [moveRight, setMoveRight] = useState(true); // Track direction
@@ -59,7 +59,7 @@ function QuestionPage({ onYes }) {
       <div className="question-container">
         <div className="heart-decoration">💝</div>
 
-        <h1 className="question-text">Hey Sophie, Will you be my Valentine?</h1>
+        <h1 className="question-text">Hey {name}, Will you be my Valentine?</h1>
 
         <div className="buttons-container">
           <button className="yes-button" onClick={onYes}>
