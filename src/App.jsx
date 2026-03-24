@@ -8,7 +8,7 @@ const GF_MAP = {
   ri: "Rahila",
   rbj: "Anuja",
   aj: "Deann",
-  d: "Sophie",
+  d: "Ajo",
 };
 
 const DEFAULT_NAME = GF_MAP["d"];
